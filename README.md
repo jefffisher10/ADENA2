@@ -31,4 +31,4 @@ LSM303 (accelerometer + magnetometer): https://github.com/adafruit/Adafruit_LSM3
 L3GD20H (triple-axis gyro): https://github.com/adafruit/Adafruit_L3GD20
 
 
-If else try something, haaha
+Test of my remote git repo - Andy
