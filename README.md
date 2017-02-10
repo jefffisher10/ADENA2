@@ -29,3 +29,6 @@ What I actually have: https://www.adafruit.com/products/1604
 BMP085 (altitude, pres, temp): https://learn.adafruit.com/bmp085/using-the-bmp085-api-v2
 LSM303 (accelerometer + magnetometer): https://github.com/adafruit/Adafruit_LSM303
 L3GD20H (triple-axis gyro): https://github.com/adafruit/Adafruit_L3GD20
+
+
+If else try something, haaha
