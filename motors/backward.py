@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from Adafruit_MotorHAT import Adafruit_MotorHAT, Adafruit_DCMotor
 
+import sys
 import time
 import atexit
 
@@ -37,7 +38,7 @@ MotorBR.run(Adafruit_MotorHAT.BACKWARD)
 MotorBL.run(Adafruit_MotorHAT.BACKWARD)
 MotorFL.run(Adafruit_MotorHAT.BACKWARD)
 # Forward for 3 seconds
-time.sleep(3.0)
+time.sleep(sys.argv[1])
 
 
 # print "Release"

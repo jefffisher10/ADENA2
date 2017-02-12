@@ -25,6 +25,7 @@ while [ 1 ]; do
 
 #	Menu
 	echo -e "\n  \e[1;37mHere are your options:\e[0m"
+	echo -e "  \e[1;37mExample: f 10 -> drive forward for 10 seconds\e[0m"
 
 	echo -e "\n\e[1;36m   KEY	ACTION\e[0m"
 	echo -e "\e[1;37m  ( F )	Forward\e[0m"
@@ -36,16 +37,16 @@ while [ 1 ]; do
 	echo -e "\e[1;37m  ( S )	Sensor readings\e[0m"
 	echo -e "  ( Q )	Quit\n"
 
-	echo -n "  (   )"
-	echo -en "\b\b\b\b\b"
-	tput cuf 2
-	read -n 1 CON
-	case $CON in
+        echo -n "#> _ __ "
+        #echo -en "\b\b\b\b\b"
+        tput cub 5
+        read DIRECTION DURATION
+        case $DIRECTION in
 
-		F|f)python /ADENA2/motors/forward.py & ;;
-		B|b)python /ADENA2/motors/backward.py & ;;
-		R|r)python /ADENA2/motors/right.py & ;;
-		L|l)python /ADENA2/motors/left.py & ;;
+                F|f)python /ADENA2/motors/forward.py $DURATION & ;;
+                B|b)python /ADENA2/motors/backward.py $DURATION & ;;
+                R|r)python /ADENA2/motors/right.py $DURATION & ;;
+                L|l)python /ADENA2/motors/left.py $DURATION & ;;
 		P|p)export SNAPDATE=$(date +"%Y-%m-%d_%H:%M")
 			/ADENA2/sensors/camera/snapshot.sh &
 			echo -e "\n  Image filename: \e[1;37m$SNAPDATE\e[0m"
